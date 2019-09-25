@@ -1,3 +1,6 @@
+let profileImageTag = document.getElementById('profile-image');
+let profileEmailTag = document.getElementById('profile-email');
+
 function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -8,6 +11,9 @@ function onSignIn(googleUser) {
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+
+	profileEmailTag.textContent = profile.getEmail();
+	profileImageTag.src = profile.getImageUrl();
       }
 
 let signOutButtons = document.getElementsByClassName('sign-out-button');
