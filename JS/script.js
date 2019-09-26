@@ -1,6 +1,9 @@
 let profileImageTag = document.getElementById('profile-image');
 let profileEmailTag = document.getElementById('profile-email');
 
+let signOutButtons = document.getElementsByClassName('sign-out-button');
+addSignOutButtonsAction();
+
 function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -14,10 +17,10 @@ function onSignIn(googleUser) {
 
 	profileEmailTag.textContent = profile.getEmail();
 	profileImageTag.src = profile.getImageUrl();
+
+	changeSignOutButtonVisibility(true);
       }
 
-let signOutButtons = document.getElementsByClassName('sign-out-button');
-addSignOutButtonsAction();
 
 function addSignOutButtonsAction() {
 	for (let i = 0; i < signOutButtons.length; i++)
@@ -29,7 +32,15 @@ function addSignOutButtonsAction() {
 							 console.log('User signed out.');
 							 profileImageTag.src = 'IMG/profile-empty-picture.png';
 							 profileEmailTag.textContent = '';
+							
+							changeSignOutButtonVisibility(false);
   			       		 });
 				});
 		}
+}
+
+function changeSignOutButtonVisibility(on) {
+	for (let i = 0; i < signOutButtons.length; i++) {
+		signOutButtons[i].style.display = on ? 'block' : 'none';
+	}
 }
