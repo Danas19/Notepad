@@ -12,8 +12,7 @@ function onSignIn(googleUser) {
         console.log("Email: " + profile.getEmail());
 
         // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
+        var id_token = googleUser.getAuthResponse().id_token; 
 
 	profileEmailTag.textContent = profile.getEmail();
 	profileImageTag.src = profile.getImageUrl();
