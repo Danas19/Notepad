@@ -1,4 +1,3 @@
-console.log('aaa');
 let profileImageTag = document.getElementById('profile-image');
 let profileEmailTag = document.getElementById('profile-email');
 
@@ -6,6 +5,7 @@ let signOutButtons = document.getElementsByClassName('sign-out-button');
 addSignOutButtonsAction();
 
 function onSignIn(googleUser) {
+console.log('aaa');
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log('Full Name: ' + profile.getName());
