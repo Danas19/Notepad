@@ -1,3 +1,4 @@
+console.log('aaa');
 let profileImageTag = document.getElementById('profile-image');
 let profileEmailTag = document.getElementById('profile-email');
 
