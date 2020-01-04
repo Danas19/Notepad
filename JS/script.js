@@ -41,6 +41,6 @@ function addSignOutButtonsAction() {
 
 function changeSignOutButtonVisibility(on) {
 	for (let i = 0; i < signOutButtons.length; i++) {
-		signOutButtons[i].style.display = on ? 'block' : 'none';
+		signOutButtons[i].style.display = on;
 	}
 }
