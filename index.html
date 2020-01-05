@@ -4,16 +4,26 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="YmSaGcDwlW56bPiVmQvz_KOmwXLVqq0tlC52DUTZP3o" />
 <title>Notepad</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <meta name="google-signin-client_id" content="14924576347-0j5emnlt56ujp5lr9dv3cuhbsk3jfac1.apps.googleusercontent.com">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 
 
 <body>
-	<div class="g-signin2" data-onsuccess="onSignIn"></div>
-	<img src='IMG/profile-empty-picture.png' id='profile-image'>
-	<span id='profile-email'></span>
-	<button class="sign-out-button">Sign Out</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+			
+			</div>
+			<div class="col-4">
+				<div class="g-signin2" data-onsuccess="onSignIn"></div>
+				<img src='IMG/profile-empty-picture.png' id='profile-image'>
+				<span id='profile-email'></span>
+				<button class="sign-out-button">Sign Out</button>
+			</div>
+		</div>
+	</div>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="JS/script.js"></script>
 </body>
